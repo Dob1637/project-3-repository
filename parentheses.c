@@ -18,34 +18,34 @@ int main(void)
     {
 	for(i = 0; i < ret - 1; i++)
 	{
-	    if((string[i]) == ")" && para_array[paralen - 1] == "(")
+	    if((string[i]) == ')' && para_array[paralen - 1] == '(')
 	    {
 		paralen -= 1;		
 	    }
-	    else if((string[i]) == "}" && para_array[paralen - 1] == "{")
+	    else if((string[i]) == '}' && para_array[paralen - 1] == '{')
 	    {
 		paralen -= 1;
 	    }
-	    else if((string[i]) == "]" && para_array[paralen - 1] == "[")
+	    else if((string[i]) == ']' && para_array[paralen - 1] == '[')
 	    {
 		paralen -= 1;
 	    }
-	    else if((string[i]) == "}" && para_array[paralen - 1] != "{")
+	    else if((string[i]) == '}' && para_array[paralen - 1] != '{')
 	    {
 	        paralen += 1;
 		break;
 	    }
-	    else if((string[i]) == ")" && para_array[paralen - 1] != "(")
+	    else if((string[i]) == ')' && para_array[paralen - 1] != '(')
 	    {
 		paralen += 1;
 	        break;
 	    }
-	    else if((string[i]) == "]" && para_array[paralen - 1] != "[")
+	    else if((string[i]) == ']' && para_array[paralen - 1] != '[')
 	    {
 	        paralen += 1;
 		break;
 	    }
-	    else if((string[i]) == "(" || string[i] == "{" || string[i] == "[")
+	    else if((string[i]) == '(' || string[i] == '{' || string[i] == '[')
 	    {
 		para_array[paralen] = string[i];
 		paralen += 1;
@@ -62,7 +62,7 @@ int main(void)
 	}
 	for(i=0; i<100; i++)
 	{
-	    para_array[i] = "0";
+	    para_array[i] = '0';
 	}
 	paralen = 0;
 	ret = getline(&string, &maxlen, stdin);
